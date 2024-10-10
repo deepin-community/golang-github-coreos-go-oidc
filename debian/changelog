@@ -1,5 +1,92 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-coreos-go-oidc (2.1.0-4) unstable; urgency=medium
 
-  * Initial release
+  * Team upload.
+  * debian/control:
+     - Reorder fields in debian/control and debian/copyright
+     - Change Section from devel to golang
+     - Update Maintainer email address to team+pkg-go@tracker.debian.org
+     - Bump debhelper build-dependency to debhelper-compat (= 13)"
+     - Use dh-sequence-golang instead of dh-golang and --with=golang
+     - Replace golang-go with golang-any for Build-Depends
+     - Add "Rules-Requires-Root: no" to debian/control
+     - Bump Standards-Version to 4.6.2 (no change)
+     - Drop -dev package’s unused dependency on ${shlibs:Depends}
+     - Mark library package with "Multi-Arch: foreign"
+     - Add missing build-dependency on golang-golang-x-net-dev
+  * debian/rules:
+     - Invoke dh with --builddirectory=_build
+     - Simplify override_dh_auto_install with "dh_auto_install -- --no-binaries"
+  * Update debian/watch to track v2 only.
+    Thanks to Leo Antunes for packaging v3 as golang-github-coreos-go-oidc-v3
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Anthony Fok <foka@debian.org>  Sat, 09 Dec 2023 00:50:01 -0700
+
+golang-github-coreos-go-oidc (2.1.0-3) unstable; urgency=medium
+
+  * Team upload
+  * Source-only re-upload
+
+ -- Reinhard Tartler <siretart@tauware.de>  Wed, 13 Sep 2023 06:33:11 -0400
+
+golang-github-coreos-go-oidc (2.1.0-2) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository, Repository-Browse.
+  * Update standards version to 4.5.0, no changes needed.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Sat, 06 Feb 2021 03:24:52 +0000
+
+golang-github-coreos-go-oidc (2.1.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 16 Dec 2019 11:37:19 +1100
+
+golang-github-coreos-go-oidc (2.0.0-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Dmitry Smirnov ]
+  * New upstream release.
+    + fixed FTBFS (Closes: #865807).
+  * Testsuite: autopkgtest-pkg-go
+  * Standards-Version: 4.4.1; Priority: optional
+  * debhelper & compat to version 12.
+  * (Build-)Depends:
+    + golang-github-pquerna-cachecontrol-dev
+    + golang-gopkg-square-go-jose.v2-dev
+    + golang-golang-x-oauth2-dev
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 21 Oct 2019 00:34:47 +1100
+
+golang-github-coreos-go-oidc (0.0~git20160926.0.16c5ecc-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream snapshot.
+  * Build-Depends += "golang-github-kylelemons-godebug-dev".
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 26 Sep 2016 14:46:33 +1000
+
+golang-github-coreos-go-oidc (0.0~git20151022.0.e9c0807-2) unstable; urgency=medium
+
+  * Team upload
+
+  [ Paul Tagliamonte ]
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Tim Potter ]
+  * Standards-Version: 3.9.8
+  * Add examples to d/examples file
+
+  [ Dmitry Smirnov ]
+  * Removed obsolete alternative "golang-clockwork-dev" (Closes: #830366)
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Thu, 14 Jul 2016 22:33:59 +1000
+
+golang-github-coreos-go-oidc (0.0~git20151022.0.e9c0807-1) unstable; urgency=medium
+
+  * Initial release (Closes: #804121)
+
+ -- Tim Potter <tpot@hpe.com>  Thu, 05 Nov 2015 13:38:59 +1100
